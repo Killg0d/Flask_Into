@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic mathematical Application</title>
+</head>
+
+<body>
+    <form name="calculatorForm" method="POST" action="">
+        <input id="num1" type="text" placeholder="number1">
+        <input id="num2" type="text" placeholder="number2">
+        <button type="button" onclick="calculate('add')">ADD!</button>
+        <button type="button" onclick="calculate('sub')">SUB!</button>
+        <button type="button" onclick="calculate('mul')">MUL!</button>
+    </form>
+    <script>
+        function calculate(action) {
+            var form = document.forms.calculatorForm;
+            var num1 = parseFloat(form.num1.value);
+            var num2 = parseFloat(form.num2.value);
+            var result;
+    
+            switch (action) {
+                case 'add':
+                    result = num1 + num2;
+                    form.action = "/add";
+                    break;
+                case 'sub':
+                    result = num1 - num2;
+                    form.action = "/sub";
+                    break;
+                case 'mul':
+                    result = num1 * num2;
+                    form.action = "/mul";
+                    break;
+                default:
+                    result = "Invalid action";
+            }
+    
+            // Set any other form parameters if needed
+            // form.paramName.value = "someValue";
+    
+            // Submit the form
+            form.submit();
+        }
+    </script>
+    
+</body>
+
+</html>
