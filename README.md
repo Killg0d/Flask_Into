@@ -33,7 +33,7 @@ python -m venv venv
 source venv/scripts/activate
 ```
 
-install the requirments
+>install the requirments
 
 ```sh
 pip install -r requirements.txt
