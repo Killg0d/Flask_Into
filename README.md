@@ -19,7 +19,23 @@ git clone https://github.com/Killg0d/Flask_Intro.git
 ## Usage
 
 ```sh
-Intall requirements.txt
+cd Flask_Intro
+```
+
+```sh
+python -m venv venv
+```
+
+```sh
+source venv/scripts/activate
+```
+
+```sh
+pip install -r requirements.txt
+```
+
+```sh
+touch config.json
 ```
 
 ## Run tests
